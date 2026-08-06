@@ -4,11 +4,15 @@ A step-by-step revision site for advanced mathematics — from **Set Theory & Ma
 
 ## Live site
 
-After enabling GitHub Pages (Settings → Pages → Source: GitHub Actions), the site will be available at:
+**https://athada.github.io/Adv-Calculus-Recap/**
 
-```
-https://<username>.github.io/Adv-Calculus-Recap/
-```
+### One-time GitHub Pages setup
+
+1. Open **Settings → Pages** on the repo.
+2. Under **Build and deployment → Source**, choose **Deploy from a branch**.
+3. Set **Branch** to `gh-pages` and folder to **`/ (root)`**, then save.
+
+Each push to `main` runs the deploy workflow, which builds the site and pushes the output to the `gh-pages` branch.
 
 ## Local development
 
