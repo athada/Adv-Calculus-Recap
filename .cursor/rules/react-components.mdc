@@ -1,0 +1,23 @@
+---
+description: React component patterns for the Advanced Calculus Recap site
+globs: src/**/*.tsx
+alwaysApply: false
+---
+
+# React Components
+
+- Use functional components with TypeScript
+- Keep business logic out of UI — graph layout in hooks, data in `content/`
+- Colocate graph components under `src/components/graph/`
+- Use `@/` path alias for imports from `src/`
+- Prefer Tailwind utility classes for styling
+
+```tsx
+// Good — data passed as props
+function TopicNode({ data }: NodeProps<TopicNodeData>) {
+  return <div className="rounded-lg border p-3">{data.title}</div>;
+}
+
+// Bad — importing curriculum directly in a leaf component
+import { topics } from '@/content/curriculum';
+```

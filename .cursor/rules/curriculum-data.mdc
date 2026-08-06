@@ -1,0 +1,13 @@
+---
+description: Curriculum roadmap and paradigm data conventions
+globs: src/content/curriculum/**
+alwaysApply: false
+---
+
+# Curriculum Roadmap
+
+- Single source of truth: `roadmap.ts` — 12 nodes with stages, paradigms, coordinate views
+- Edges derived from `parents[]` — do not maintain separate `edges.ts`
+- Paradigm values: `coord_free`, `coord_dep`, `both`
+- Each node has `coordinate_free` and `coordinate_dependent` sections
+- Content modules: `topics/<id>/` + register in `registry.ts` + add to `TOPICS_WITH_CONTENT` in `index.ts`

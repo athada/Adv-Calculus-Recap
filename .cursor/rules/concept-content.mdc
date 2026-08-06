@@ -1,0 +1,15 @@
+---
+description: Concept content module pattern for topic detail pages
+globs: src/content/curriculum/topics/**
+alwaysApply: false
+---
+
+# Concept Content Modules
+
+- Each topic extends `BaseTopicModule` with `subtopics` using `ConceptGroup[]` bundles
+- Register interactive diagrams in `module.ts` (implement `InteractiveDiagramProps`)
+- Subtopic data in `subtopics/index.ts` — pure data, no JSX
+- Diagrams in `diagrams/` — one interactive diagram per subtopic covering all groups
+- Group `id` must match diagram focus keys for sync
+
+Do not import UI into `subtopics/`. Use `$...$` for inline LaTeX in prose fields.
